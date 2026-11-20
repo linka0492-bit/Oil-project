@@ -1,0 +1,5 @@
+Sample,N,EG t (USD/RUB on Brent),EG p (USD/RUB on Brent),EG p (Brent on USD/RUB),Johansen k_ar_diff,Trace r=0,Trace 5% crit r=0,Trace r<=1,Trace 5% crit r<=1,Rank (trace),Rank (max-eig),Note
+full,132,-2.0233,0.5165,0.4053,2.0,12.0027,15.4943,1.913,3.8415,0.0,0.0,
+float_2014_11_on,122,-2.6702,0.2105,0.3472,2.0,8.395,15.4943,1.0802,3.8415,0.0,0.0,
+pre_2022,98,-1.1309,0.8751,0.7854,2.0,9.7765,15.4943,1.0168,3.8415,0.0,0.0,
+post_2022,34,,,,,,,,,,,пропущено: меньше 60 наблюдений

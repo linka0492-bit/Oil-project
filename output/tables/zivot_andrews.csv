@@ -1,0 +1,5 @@
+Variable,Break type,ZA stat,p-value,5% crit,Lag,Break date,Reject unit root (5%)
+ln Brent,break in intercept,-3.6786,0.562,-4.8107,2,2020-11,False
+ln Brent,break in intercept and trend,-3.316,0.8883,-5.0733,2,2020-11,False
+ln USD/RUB,break in intercept,-3.9404,0.3879,-4.8107,1,2022-03,False
+ln USD/RUB,break in intercept and trend,-4.9512,0.0713,-5.0733,1,2022-03,False
