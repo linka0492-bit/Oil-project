@@ -1,0 +1,7 @@
+﻿Variable,Deterministics,ADF stat (p),KPSS stat (p),Verdict
+ln Brent,constant,-2.50 (0.116),0.41 (0.074),inconclusive
+ln Brent,const+trend,-2.96 (0.144),0.17 (0.029),non-stationary
+ln USD/RUB,constant,-2.47 (0.124),1.31 (0.010),non-stationary
+ln USD/RUB,const+trend,-3.63 (0.028),0.11 (0.100),stationary
+Δ ln Brent (r),constant,-8.90 (0.000),0.10 (0.100),stationary
+Δ ln USD/RUB (g),constant,-7.64 (0.000),0.09 (0.100),stationary

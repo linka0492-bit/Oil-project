@@ -1,0 +1,5 @@
+﻿Variant,Criterion,Selected breaks,Regime starts
+baseline,BIC,1,2016-05
+baseline,LWZ,0,-
+ex-COVID,BIC,1,2017-03
+ex-COVID,LWZ,0,-

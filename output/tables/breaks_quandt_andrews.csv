@@ -1,0 +1,5 @@
+Variant,Break in,N,supF,Break date,Bootstrap p,Crit 10%,Crit 5%,Crit 1%
+baseline,slopes only,131,15.3444,2016-05,0.102,15.4012,17.7947,23.3649
+baseline,all coefficients,131,10.2379,2016-05,0.169,11.7106,13.3551,17.8724
+ex-COVID,slopes only,126,16.6412,2017-03,0.045,13.635,16.1993,19.7789
+ex-COVID,all coefficients,126,11.0286,2017-03,0.096,10.9036,12.7054,15.0169

@@ -1,0 +1,25 @@
+﻿Window,Model,N,RMSE ratio vs hist. mean,OOS R2,DM p,Clark-West p
+all OOS,Zero change,71,0.998,0.005,,
+all OOS,AR(1),71,1.129,-0.275,0.820,0.738
+all OOS,Oil lag (r_t-1),71,1.048,-0.099,0.861,0.146
+all OOS,AR(1) + oil lag,71,1.198,-0.434,0.848,0.791
+all OOS,"Nowcast (r_t, same month)",71,1.093,-0.195,0.936,0.217
+all OOS,Nowcast + oil lag,71,1.132,-0.281,0.936,0.211
+all OOS ex-COVID,Zero change,66,0.995,0.009,,
+all OOS ex-COVID,AR(1),66,1.136,-0.291,0.815,0.764
+all OOS ex-COVID,Oil lag (r_t-1),66,1.003,-0.006,0.614,0.214
+all OOS ex-COVID,AR(1) + oil lag,66,1.201,-0.443,0.834,0.808
+all OOS ex-COVID,"Nowcast (r_t, same month)",66,1.066,-0.137,0.885,0.702
+all OOS ex-COVID,Nowcast + oil lag,66,1.065,-0.134,0.879,0.680
+before Mar 2022,Zero change,37,0.985,0.029,,
+before Mar 2022,AR(1),37,1.010,-0.021,0.575,0.008
+before Mar 2022,Oil lag (r_t-1),37,1.326,-0.759,0.855,0.117
+before Mar 2022,AR(1) + oil lag,37,1.083,-0.173,0.770,0.023
+before Mar 2022,"Nowcast (r_t, same month)",37,1.272,-0.619,0.824,0.069
+before Mar 2022,Nowcast + oil lag,37,1.525,-1.325,0.849,0.066
+from Mar 2022,Zero change,34,0.999,0.001,,
+from Mar 2022,AR(1),34,1.145,-0.311,0.813,0.780
+from Mar 2022,Oil lag (r_t-1),34,1.003,-0.006,0.608,0.474
+from Mar 2022,AR(1) + oil lag,34,1.213,-0.471,0.834,0.822
+from Mar 2022,"Nowcast (r_t, same month)",34,1.066,-0.136,0.879,0.856
+from Mar 2022,Nowcast + oil lag,34,1.065,-0.134,0.875,0.851

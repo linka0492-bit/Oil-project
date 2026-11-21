@@ -1,0 +1,5 @@
+﻿Variable,Break type,ZA stat,p-value,Break date
+ln Brent,break in intercept,-3.68,0.562,2020-11
+ln Brent,break in intercept and trend,-3.32,0.888,2020-11
+ln USD/RUB,break in intercept,-3.94,0.388,2022-03
+ln USD/RUB,break in intercept and trend,-4.95,0.071,2022-03

@@ -1,0 +1,5 @@
+﻿Variant,Break in,N,supF,Estimated break,Bootstrap p,5% critical value
+baseline,slopes only,131,15.34,2016-05,0.102,17.79
+baseline,all coefficients,131,10.24,2016-05,0.169,13.36
+ex-COVID,slopes only,126,16.64,2017-03,0.045,16.20
+ex-COVID,all coefficients,126,11.03,2017-03,0.096,12.71

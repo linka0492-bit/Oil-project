@@ -1,0 +1,4 @@
+﻿Sample,N,Engle-Granger p (USD/RUB on Brent),Johansen rank (trace),Johansen rank (max-eig)
+full,132,0.516,0,0
+float_2014_11_on,122,0.210,0,0
+pre_2022,98,0.875,0,0

@@ -1,0 +1,7 @@
+﻿Variant,Regimes compared,Difference in sum of betas (se),p equal slopes (bootstrap),p equal sums (bootstrap)
+baseline,R1 vs R2,-0.563 (0.079),0.002,0.002
+baseline,R1 vs R3,-0.970 (0.334),0.010,0.006
+baseline,R2 vs R3,-0.407 (0.324),0.224,0.442
+ex-COVID,R1 vs R2,-0.583 (0.082),0.002,0.002
+ex-COVID,R1 vs R3,-0.970 (0.334),0.004,0.002
+ex-COVID,R2 vs R3,-0.388 (0.320),0.382,0.456

@@ -1,0 +1,29 @@
+Model,Test,Statistic,p-value,Flag (p<0.05),Note
+"DL, p=0 [BIC / AIC]","Breusch-Godfrey (serial corr., 6 lags)",9.8542,0.1309,False,
+"DL, p=0 [BIC / AIC]",Ljung-Box (12 lags),13.1954,0.355,False,
+"DL, p=0 [BIC / AIC]",Breusch-Pagan (heteroskedasticity),0.0068,0.9341,False,
+"DL, p=0 [BIC / AIC]",ARCH-LM (6 lags),59.4823,0.0,True,кластеры волатильности
+"DL, p=0 [BIC / AIC]",Jarque-Bera (normality),776.3551,0.0,True,
+"DL, p=0 [BIC / AIC]",RESET (functional form),0.8036,0.3717,False,
+"DL, p=0 [BIC / AIC]",CUSUM (parameter stability),0.6988,0.7132,False,малое p = признак нестабильности
+"DL, p=12 [p=12]","Breusch-Godfrey (serial corr., 6 lags)",9.5029,0.1472,False,
+"DL, p=12 [p=12]",Ljung-Box (12 lags),14.4793,0.2712,False,
+"DL, p=12 [p=12]",Breusch-Pagan (heteroskedasticity),5.0476,0.9741,False,
+"DL, p=12 [p=12]",ARCH-LM (6 lags),48.414,0.0,True,кластеры волатильности
+"DL, p=12 [p=12]",Jarque-Bera (normality),661.6867,0.0,True,
+"DL, p=12 [p=12]",RESET (functional form),0.1097,0.7412,False,
+"DL, p=12 [p=12]",CUSUM (parameter stability),0.5158,0.9529,False,малое p = признак нестабильности
+"ADL, p=0 [ADL, AIC]","Breusch-Godfrey (serial corr., 6 lags)",7.3203,0.2922,False,
+"ADL, p=0 [ADL, AIC]",Ljung-Box (12 lags),7.6541,0.8115,False,
+"ADL, p=0 [ADL, AIC]",Breusch-Pagan (heteroskedasticity),12.5898,0.0018,True,
+"ADL, p=0 [ADL, AIC]",ARCH-LM (6 lags),53.3001,0.0,True,кластеры волатильности
+"ADL, p=0 [ADL, AIC]",Jarque-Bera (normality),1680.1525,0.0,True,
+"ADL, p=0 [ADL, AIC]",RESET (functional form),9.2386,0.0029,True,
+"ADL, p=0 [ADL, AIC]",CUSUM (parameter stability),0.5725,0.8985,False,малое p = признак нестабильности
+"DUM, p=0 [DUM, AIC]","Breusch-Godfrey (serial corr., 6 lags)",9.7468,0.1357,False,
+"DUM, p=0 [DUM, AIC]",Ljung-Box (12 lags),13.0452,0.3658,False,
+"DUM, p=0 [DUM, AIC]",Breusch-Pagan (heteroskedasticity),8.0161,0.0457,True,
+"DUM, p=0 [DUM, AIC]",ARCH-LM (6 lags),58.7509,0.0,True,кластеры волатильности
+"DUM, p=0 [DUM, AIC]",Jarque-Bera (normality),774.117,0.0,True,
+"DUM, p=0 [DUM, AIC]",RESET (functional form),7.2291,0.0081,True,
+"DUM, p=0 [DUM, AIC]",CUSUM (parameter stability),0.6784,0.7468,False,малое p = признак нестабильности

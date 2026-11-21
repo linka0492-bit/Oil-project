@@ -34,12 +34,14 @@ import config as C
 UA = {"User-Agent": "Mozilla/5.0 (compatible; research-script)"}
 BRENT_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MCOILBRENTEU"
 USDIDX_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS"
+BRENT_D_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU"
 CBR_URL = ("https://www.cbr.ru/scripts/XML_dynamic.asp"
            "?date_req1={d1}&date_req2={d2}&VAL_NM_RQ=R01235")  # R01235 = USD
 
 BRENT_FILE = C.RAW / "brent_fred.csv"
 USDRUB_FILE = C.RAW / "usdrub_cbr.csv"
 USDIDX_FILE = C.RAW / "usd_index_fred.csv"
+BRENT_D_FILE = C.RAW / "brent_daily_fred.csv"
 
 BUFFER_START = pd.Timestamp(C.START) - pd.DateOffset(months=1)
 
@@ -145,11 +147,23 @@ def build(refresh):
     usdrub = to_month(fx_daily)
     usdrub_eom = fx_daily.resample("MS").last().rename("usdrub_eom")
 
-    df = pd.concat([brent, usdrub, usdrub_eom], axis=1)
+    # Brent на конец месяца (для проверки эффекта усреднения; необязательно)
+    notes = []
+    brent_eom = None
+    if fetch_csv(BRENT_D_URL, BRENT_D_FILE, "Brent (дневной)", refresh):
+        try:
+            brent_eom = read_series(BRENT_D_FILE, "brent_eom").resample("MS").last()
+            notes.append("brent_eom: подключён (последнее дневное значение месяца)")
+        except Exception as e:
+            notes.append(f"brent_eom: ошибка чтения ({e})")
+    else:
+        notes.append("brent_eom: дневной Brent недоступен, пропущен")
+
+    parts = [brent, usdrub, usdrub_eom] + ([brent_eom] if brent_eom is not None else [])
+    df = pd.concat(parts, axis=1)
     df = df.loc[BUFFER_START:C.END]
 
     # Необязательные переменные
-    notes = []
     fetch_csv(USDIDX_URL, USDIDX_FILE, "Индекс доллара", refresh)
     extras = {"usd_index": USDIDX_FILE, "urals": C.RAW / "urals.csv",
               "keyrate": C.RAW / "keyrate.csv", "cpi": C.RAW / "cpi.csv"}
@@ -180,12 +194,14 @@ def build(refresh):
     df.index.name = "date"
 
     # Логарифмы и приросты (в процентах: 100 * Δln)
-    for col in ("brent", "usdrub", "usdrub_eom", "urals", "usd_index", "cpi"):
+    for col in ("brent", "usdrub", "usdrub_eom", "brent_eom", "urals", "usd_index", "cpi"):
         if col in df:
             df[f"ln_{col}"] = np.log(df[col])
     df["r"] = 100 * df["ln_brent"].diff()      # прирост Brent, %
     df["g"] = 100 * df["ln_usdrub"].diff()     # прирост USD/RUB, % (+ = ослабление рубля)
     df["g_eom"] = 100 * df["ln_usdrub_eom"].diff()
+    if "ln_brent_eom" in df:
+        df["r_eom"] = 100 * df["ln_brent_eom"].diff()
     for col in ("urals", "usd_index", "cpi"):
         if col in df:
             df[f"d_{col}"] = 100 * df[f"ln_{col}"].diff()
